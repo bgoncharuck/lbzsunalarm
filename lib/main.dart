@@ -8,6 +8,6 @@ class App extends StatelessWidget {
   const App({super.key});
 
   @override
-  Widget build(context) =>
+  Widget build(BuildContext context) =>
       const Center(child: Text('test', textDirection: TextDirection.ltr));
 }

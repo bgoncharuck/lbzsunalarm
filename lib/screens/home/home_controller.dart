@@ -4,11 +4,23 @@ import 'package:lbzsunalarm/logic.dart';
 class HomeScreenController extends ScreenController {
   HomeScreenController();
 
+  DateTime? dt;
+
   void init() {
     if (super.initOnce) {
       return;
     }
     widgetsBinding.removeSplashScreen();
+  }
+
+  Future<void> sunset({String cityName = 'Kyiv'}) async {}
+
+  Future<void> sunrise({String cityName = 'Kyiv'}) async {}
+
+  Future<void> alarm() async {
+    if (dt == null) {
+      return;
+    }
   }
 
   void exit(BuildContext context) {}

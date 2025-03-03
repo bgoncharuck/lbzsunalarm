@@ -10,9 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  geocoding: ^3.0.0
-  suntime: ^0.1.0
-  lat_lng_to_timezone: ^0.2.0
+  flutter_native_splash: ^2.4.1
+  flutter_dotenv: ^5.2.1
 
 dev_dependencies:
   flutter_lints: ^5.0.0
@@ -20,3 +19,11 @@ dev_dependencies:
 
 flutter:
   uses-material-design: false
+
+  assets:
+    - assets/
+    - .env
+
+# dart run flutter_native_splash:create
+flutter_native_splash:
+  background_image: splash.png

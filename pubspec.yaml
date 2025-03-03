@@ -12,6 +12,10 @@ dependencies:
     sdk: flutter
   flutter_native_splash: ^2.4.1
   flutter_dotenv: ^5.2.1
+  adaptive_formula:
+    git:
+      url: https://github.com/bgoncharuck/adaptive_formula.git
+      ref: dbb27befe052cc29872dfb378db7dc2c41c84e43
 
 dev_dependencies:
   flutter_lints: ^5.0.0

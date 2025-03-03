@@ -2,6 +2,12 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "adaptive_formula",
+      "rootUri": "file:///Users/volos/.pub-cache/git/adaptive_formula-dbb27befe052cc29872dfb378db7dc2c41c84e43/",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "ansicolor",
       "rootUri": "file:///Users/volos/.pub-cache/hosted/pub.dev/ansicolor-2.0.3",
       "packageUri": "lib/",
@@ -194,7 +200,7 @@
       "languageVersion": "3.7"
     }
   ],
-  "generated": "2025-03-03T14:27:22.081402Z",
+  "generated": "2025-03-03T16:44:35.912325Z",
   "generator": "pub",
   "generatorVersion": "3.7.0",
   "flutterRoot": "file:///Users/volos/sdks/flutter",

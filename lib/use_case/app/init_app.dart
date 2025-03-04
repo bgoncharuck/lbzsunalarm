@@ -1,4 +1,5 @@
 // import 'package:lbzsunalarm/use_case/app/init_env.dart';
+import 'package:alarm/alarm.dart';
 import 'package:lbzsunalarm/use_case/app/widget_binding.dart';
 import 'package:lbzsunalarm/use_case/i_use_case.dart';
 
@@ -10,9 +11,10 @@ class InitializeApp with IUseCase<void Function(), void> {
   Future<void> execute({required void Function() params}) async {
     await Future.wait([
       const ConfigWidgetsBinding().execute(),
-
       // const InitializeEnvironment().execute(params: [/*write your env variables here*/]),
     ]);
+
+    await Alarm.init();
 
     params();
   }

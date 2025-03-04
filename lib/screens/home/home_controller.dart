@@ -92,12 +92,6 @@ class HomeScreenController extends ScreenController {
     );
   }
 
-  void setAlarm() {
-    if (selectedTime == null) {
-      return;
-    }
-  }
-
   void exit(BuildContext context) {}
 }
 

@@ -5,9 +5,6 @@ import 'package:lbzsunalarm/screens/home/home_screen.dart';
 late GlobalKey<NavigatorState> navigatorKey;
 
 const String pathHome = '/home';
-const String pathError = '/error';
-const String pathInitialization = '/initialization';
-const String pathTerms = '/terms';
 
 class RouteException implements Exception {
   const RouteException(this.message);

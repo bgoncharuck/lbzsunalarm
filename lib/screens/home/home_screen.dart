@@ -86,16 +86,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               verticalWhiteTripleSliverSpacer,
-              // SliverPadding(
-              //   padding: adaptiveInset(left: 16, right: 16),
-              //   sliver: SliverToBoxAdapter(
-              //     child: PrimaryBigButton(
-              //       text: 'Set Alarm',
-              //       onPressed: () => setState(sctl.setAlarm),
-              //     ),
-              //   ),
-              // ),
-              // verticalWhiteSliverSpacer,
             ],
           ),
         ),

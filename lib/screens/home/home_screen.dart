@@ -1,3 +1,4 @@
+import 'package:lbzsunalarm/common/button/primary_big.dart';
 import 'package:lbzsunalarm/screens/home/home_controller.dart';
 import 'package:lbzsunalarm/ui.dart';
 
@@ -48,13 +49,43 @@ class _HomeScreenState extends State<HomeScreen> {
                         Text(
                           '${sctl.selectedTime!.hour}:'
                           '${sctl.selectedTime!.minute}',
-                          style: s12w500,
+                          style: s28w500,
                         ),
                     ],
                   ),
                 ),
               ),
               verticalWhiteDoubleSliverSpacer,
+              SliverPadding(
+                padding: adaptiveInset(left: 16, right: 16),
+                sliver: SliverToBoxAdapter(
+                  child: PrimaryBigButton(
+                    text: "Today's Sunset",
+                    onPressed: () => setState(sctl.todaySunset),
+                  ),
+                ),
+              ),
+              verticalWhiteSliverSpacer,
+              SliverPadding(
+                padding: adaptiveInset(left: 16, right: 16),
+                sliver: SliverToBoxAdapter(
+                  child: PrimaryBigButton(
+                    text: "Tomorrow's Sunrise",
+                    onPressed: () => setState(sctl.tomorrowSunrise),
+                  ),
+                ),
+              ),
+              verticalWhiteSliverSpacer,
+              SliverPadding(
+                padding: adaptiveInset(left: 16, right: 16),
+                sliver: SliverToBoxAdapter(
+                  child: PrimaryBigButton(
+                    text: "Today's Sunrise",
+                    onPressed: () => setState(sctl.todaySunrise),
+                  ),
+                ),
+              ),
+              verticalWhiteSliverSpacer,
             ],
           ),
         ),

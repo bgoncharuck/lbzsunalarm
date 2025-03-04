@@ -1,5 +1,4 @@
-import 'dart:developer';
-
+import 'package:lat_lng_to_timezone/lat_lng_to_timezone.dart';
 import 'package:lbzsunalarm/app/widgets_binding.dart';
 import 'package:lbzsunalarm/logic.dart';
 import 'package:lbzsunalarm/use_case/time/create_daylight_calc.dart';
@@ -54,12 +53,43 @@ class HomeScreenController extends ScreenController {
     return location;
   }
 
-  Future<void> todaySunset() async {
-    // final today = DateTime.now();
+  void todaySunset() {
+    final calc = dlc[currentLocation];
+    if (calc == null) {
+      return;
+    }
+    final today = DateTime.now();
+
+    selectedTime = calc.calc.getLocalSunsetTime(
+      latLngToTimezoneString(calc.lat, calc.lon),
+      date: today,
+    );
   }
 
-  Future<void> tomorrowSunrise() async {
-    // final tomorrow = DateTime.now().add(const Duration(days: 1));
+  void tomorrowSunrise() {
+    final calc = dlc[currentLocation];
+    if (calc == null) {
+      return;
+    }
+    final tomorrow = DateTime.now().add(const Duration(days: 1));
+
+    selectedTime = calc.calc.getLocalSunriseTime(
+      latLngToTimezoneString(calc.lat, calc.lon),
+      date: tomorrow,
+    );
+  }
+
+  void todaySunrise() {
+    final calc = dlc[currentLocation];
+    if (calc == null) {
+      return;
+    }
+    final today = DateTime.now();
+
+    selectedTime = calc.calc.getLocalSunriseTime(
+      latLngToTimezoneString(calc.lat, calc.lon),
+      date: today,
+    );
   }
 
   Future<void> alarm() async {}

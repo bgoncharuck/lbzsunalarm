@@ -24,7 +24,7 @@ class PrimaryBigButton extends StatelessWidget {
           borderRadius: const BorderRadius.all(Radius.circular(8)),
         ),
         child: Center(
-          child: Text(text, style: default14w600.copyWith(color: primary)),
+          child: Text(text, style: s14w600.copyWith(color: primary)),
         ),
       ),
     );

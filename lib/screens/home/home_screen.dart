@@ -24,13 +24,29 @@ class _HomeScreenState extends State<HomeScreen> {
     return PopScope(
       canPop: false,
       onPopInvokedWithResult: (_, __) => sctl.exit(context),
-      child: const SafeArea(
+      child: SafeArea(
         child: CupertinoPageScaffold(
           child: CustomScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             slivers: [
               verticalWhiteSliverSpacer,
-              SliverToBoxAdapter(child: Text('Home')),
+              SliverPadding(
+                padding: adaptiveInset(left: 16, right: 16),
+                sliver: SliverToBoxAdapter(
+                  child: Row(
+                    children: [
+                      Text(sctl.currentLocation, style: s28w500),
+                      const Expanded(child: SizedBox.shrink()),
+                      if (sctl.selectedTime != null)
+                        Text(
+                          '${sctl.selectedTime!.hour}:'
+                          '${sctl.selectedTime!.minute}',
+                          style: s12w500,
+                        ),
+                    ],
+                  ),
+                ),
+              ),
               verticalWhiteSliverSpacer,
             ],
           ),

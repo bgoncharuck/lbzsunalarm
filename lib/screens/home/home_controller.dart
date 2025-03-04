@@ -5,10 +5,24 @@ import 'package:lbzsunalarm/use_case/time/create_locations.dart';
 
 class HomeScreenController extends ScreenController {
   HomeScreenController();
+  static const locationNotFound = 'No Location Found or No Internet';
+  static const defaultLocation = 'Kyiv';
 
+  final TextEditingController locationSearch = TextEditingController();
   final Map<String, DaylightCalculator> dlc = {};
+  String currentLocation = '';
+
+  DateTime? selectedTime;
 
   void init() {
+    /// test
+    selectedTime = null;
+    locationSearch.text = defaultLocation;
+    addLocation(defaultLocation);
+    currentLocation = defaultLocation;
+
+    ///
+
     if (super.initOnce) {
       return;
     }
@@ -24,14 +38,14 @@ class HomeScreenController extends ScreenController {
       params: location,
     );
     if (locations.isEmpty) {
-      return 'No Location Found or No Internet';
+      return locationNotFound;
     }
 
     final dayLightCalc = await const CreateDaylightCalculator().execute(
       params: locations,
     );
     if (dayLightCalc == null) {
-      return 'No Location Found or No Internet';
+      return locationNotFound;
     }
 
     dlc[location] = dayLightCalc;

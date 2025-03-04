@@ -96,16 +96,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               verticalWhiteSliverSpacer,
-              SliverPadding(
-                padding: adaptiveInset(left: 16, right: 16),
-                sliver: SliverToBoxAdapter(
-                  child: PrimaryBigButton(
-                    text: 'Cancel Alarm',
-                    onPressed: () => setState(sctl.cancelAlarm),
-                  ),
-                ),
-              ),
-              verticalWhiteSliverSpacer,
             ],
           ),
         ),

@@ -1,7 +1,4 @@
-import 'dart:io';
-
-import 'package:alarm/alarm.dart';
-import 'package:alarm/model/volume_settings.dart';
+import 'package:flutter_alarm_clock/flutter_alarm_clock.dart';
 import 'package:lat_lng_to_timezone/lat_lng_to_timezone.dart';
 import 'package:lbzsunalarm/app/widgets_binding.dart';
 import 'package:lbzsunalarm/logic.dart';
@@ -96,39 +93,15 @@ class HomeScreenController extends ScreenController {
     );
   }
 
-  Future<void> setAlarm() async {
+  void setAlarm() {
     if (selectedTime == null) {
       return;
     }
 
-    final alarmSettings = AlarmSettings(
-      id: 42,
-      dateTime: selectedTime!,
-      assetAudioPath: 'assets/alarm.mp3',
-      // loopAudio: true,
-      // vibrate: true,
-      warningNotificationOnKill: Platform.isIOS,
-      // androidFullScreenIntent: true,
-      volumeSettings: VolumeSettings.fade(
-        volume: 0.8,
-        fadeDuration: const Duration(seconds: 5),
-        volumeEnforced: true,
-      ),
-      notificationSettings: NotificationSettings(
-        title: 'Sunset Alarm Test',
-        body:
-            '${selectedTime!.day}/${selectedTime!.month}/${selectedTime!.year}'
-            '\n${selectedTime!.hour}:${selectedTime!.minute}',
-        stopButton: 'Stop',
-        icon: 'notification_icon',
-      ),
+    FlutterAlarmClock.createAlarm(
+      hour: selectedTime!.hour,
+      minutes: selectedTime!.minute,
     );
-
-    await Alarm.set(alarmSettings: alarmSettings);
-  }
-
-  Future<void> cancelAlarm() async {
-    await Alarm.stop(42);
   }
 
   void exit(BuildContext context) {}

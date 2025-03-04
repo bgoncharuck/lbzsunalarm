@@ -1,4 +1,3 @@
-import 'package:flutter_alarm_clock/flutter_alarm_clock.dart';
 import 'package:lat_lng_to_timezone/lat_lng_to_timezone.dart';
 import 'package:lbzsunalarm/app/widgets_binding.dart';
 import 'package:lbzsunalarm/logic.dart';
@@ -97,11 +96,6 @@ class HomeScreenController extends ScreenController {
     if (selectedTime == null) {
       return;
     }
-
-    FlutterAlarmClock.createAlarm(
-      hour: selectedTime!.hour,
-      minutes: selectedTime!.minute,
-    );
   }
 
   void exit(BuildContext context) {}

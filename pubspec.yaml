@@ -12,6 +12,9 @@ dependencies:
     sdk: flutter
   flutter_native_splash: ^2.4.1
   flutter_dotenv: ^5.2.1
+  geocoding: ^3.0.0
+  suntime: ^0.1.0
+  lat_lng_to_timezone: ^0.2.0
   adaptive_formula:
     git:
       url: https://github.com/bgoncharuck/adaptive_formula.git

@@ -32,6 +32,12 @@
       "languageVersion": "3.4"
     },
     {
+      "name": "clock",
+      "rootUri": "file:///Users/volos/.pub-cache/hosted/pub.dev/clock-1.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
       "name": "collection",
       "rootUri": "file:///Users/volos/.pub-cache/hosted/pub.dev/collection-1.19.1",
       "packageUri": "lib/",
@@ -48,6 +54,12 @@
       "rootUri": "file:///Users/volos/.pub-cache/hosted/pub.dev/csslib-1.0.2",
       "packageUri": "lib/",
       "languageVersion": "3.1"
+    },
+    {
+      "name": "date_utils",
+      "rootUri": "file:///Users/volos/.pub-cache/hosted/pub.dev/date_utils-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "ffi",
@@ -86,6 +98,30 @@
       "languageVersion": "3.7"
     },
     {
+      "name": "geocoding",
+      "rootUri": "file:///Users/volos/.pub-cache/hosted/pub.dev/geocoding-3.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "geocoding_android",
+      "rootUri": "file:///Users/volos/.pub-cache/hosted/pub.dev/geocoding_android-3.3.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "geocoding_ios",
+      "rootUri": "file:///Users/volos/.pub-cache/hosted/pub.dev/geocoding_ios-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "geocoding_platform_interface",
+      "rootUri": "file:///Users/volos/.pub-cache/hosted/pub.dev/geocoding_platform_interface-3.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "html",
       "rootUri": "file:///Users/volos/.pub-cache/hosted/pub.dev/html-0.15.5",
       "packageUri": "lib/",
@@ -96,6 +132,18 @@
       "rootUri": "file:///Users/volos/.pub-cache/hosted/pub.dev/image-4.5.3",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "intl",
+      "rootUri": "file:///Users/volos/.pub-cache/hosted/pub.dev/intl-0.17.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "lat_lng_to_timezone",
+      "rootUri": "file:///Users/volos/.pub-cache/hosted/pub.dev/lat_lng_to_timezone-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "lints",
@@ -128,6 +176,12 @@
       "languageVersion": "3.5"
     },
     {
+      "name": "plugin_platform_interface",
+      "rootUri": "file:///Users/volos/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.8",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "posix",
       "rootUri": "file:///Users/volos/.pub-cache/hosted/pub.dev/posix-6.0.1",
       "packageUri": "lib/",
@@ -152,10 +206,22 @@
       "languageVersion": "3.1"
     },
     {
+      "name": "suntime",
+      "rootUri": "file:///Users/volos/.pub-cache/hosted/pub.dev/suntime-0.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "term_glyph",
       "rootUri": "file:///Users/volos/.pub-cache/hosted/pub.dev/term_glyph-1.2.2",
       "packageUri": "lib/",
       "languageVersion": "3.1"
+    },
+    {
+      "name": "timezone",
+      "rootUri": "file:///Users/volos/.pub-cache/hosted/pub.dev/timezone-0.8.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "typed_data",
@@ -200,7 +266,7 @@
       "languageVersion": "3.7"
     }
   ],
-  "generated": "2025-03-03T16:44:35.912325Z",
+  "generated": "2025-03-04T09:42:18.262704Z",
   "generator": "pub",
   "generatorVersion": "3.7.0",
   "flutterRoot": "file:///Users/volos/sdks/flutter",

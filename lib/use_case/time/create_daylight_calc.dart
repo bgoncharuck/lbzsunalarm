@@ -3,9 +3,9 @@ import 'package:lbzsunalarm/use_case/i_use_case.dart';
 import 'package:suntime/suntime.dart';
 
 class DaylightCalculator {
-  const DaylightCalculator({required this.calc, required this.location});
+  const DaylightCalculator({required this.sun, required this.location});
 
-  final Sun calc;
+  final Sun sun;
   final Location location;
   double get lat => location.latitude;
   double get lon => location.longitude;
@@ -24,7 +24,7 @@ class CreateDaylightCalculator
       }
 
       return DaylightCalculator(
-        calc: Sun(location.latitude, location.longitude),
+        sun: Sun(location.latitude, location.longitude),
         location: location,
       );
     } catch (_) {

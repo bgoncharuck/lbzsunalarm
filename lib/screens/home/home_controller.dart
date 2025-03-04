@@ -60,7 +60,7 @@ class HomeScreenController extends ScreenController {
     }
     final today = DateTime.now();
 
-    selectedTime = calc.calc.getLocalSunsetTime(
+    selectedTime = calc.sun.getLocalSunsetTime(
       latLngToTimezoneString(calc.lat, calc.lon),
       date: today,
     );
@@ -73,7 +73,7 @@ class HomeScreenController extends ScreenController {
     }
     final tomorrow = DateTime.now().add(const Duration(days: 1));
 
-    selectedTime = calc.calc.getLocalSunriseTime(
+    selectedTime = calc.sun.getLocalSunriseTime(
       latLngToTimezoneString(calc.lat, calc.lon),
       date: tomorrow,
     );
@@ -86,7 +86,7 @@ class HomeScreenController extends ScreenController {
     }
     final today = DateTime.now();
 
-    selectedTime = calc.calc.getLocalSunriseTime(
+    selectedTime = calc.sun.getLocalSunriseTime(
       latLngToTimezoneString(calc.lat, calc.lon),
       date: today,
     );

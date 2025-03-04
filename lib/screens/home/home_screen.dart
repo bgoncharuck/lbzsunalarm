@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: CustomScrollView(
             physics: const BouncingScrollPhysics(),
             slivers: [
-              verticalWhiteSliverSpacer,
+              verticalWhiteDoubleSliverSpacer,
               SliverPadding(
                 padding: adaptiveInset(left: 16, right: 16),
                 sliver: SliverToBoxAdapter(
@@ -54,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-              verticalWhiteSliverSpacer,
+              verticalWhiteDoubleSliverSpacer,
             ],
           ),
         ),

@@ -1,6 +1,8 @@
 import 'package:lbzsunalarm/screens/home/home_controller.dart';
 import 'package:lbzsunalarm/ui.dart';
 
+bool adaptiveFormulaIsNotInitialized = true;
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -21,6 +23,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    if (adaptiveFormulaIsNotInitialized) {
+      adaptiveFormulaInitFromBuildContext(context: context);
+      adaptiveFormulaIsNotInitialized = false;
+    }
+
     return PopScope(
       canPop: false,
       onPopInvokedWithResult: (_, __) => sctl.exit(context),
